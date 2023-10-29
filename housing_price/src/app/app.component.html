@@ -1,0 +1,84 @@
+<div class="box">
+  <form #predictionForm="ngForm">
+        <div class="housingParent">
+          <span class="divhead">Housing Price Prediction</span>
+          <div class="inputfields">
+            <div class="input">
+            <br />
+            <input type="tel" placeholder="Bedrooms" [(ngModel)]="HousingPred.bedrooms" name="bedrooms" required #bedrooms="ngModel" />
+            <br />
+            <small class="error" *ngIf="bedrooms.touched && bedrooms.invalid">Invalid No. of Bedrooms</small>
+            </div>
+            <div class="input">
+            <br />
+            <input type="tel" placeholder="Bathrooms" [(ngModel)]="HousingPred.bathrooms" name="bathrooms" required #bathrooms="ngModel" />
+            <br />
+            <small class="error" *ngIf="bathrooms.touched && bathrooms.invalid">Invalid No. of Bathrooms</small>
+            </div>
+            <div class="input">
+              <br />
+              <input type="tel" placeholder="Sq. Ft. Living" [(ngModel)]="HousingPred.sqft_living" name="sqft_living" required #sqft_living="ngModel" />
+              <br />
+              <small class="error" *ngIf="sqft_living.touched && sqft_living.invalid">Invalid Sq. Ft. Living Value</small>
+            </div>
+            <div class="input">
+              <br />
+              <input type="tel" placeholder="Sq. Ft. Lot" [(ngModel)]="HousingPred.sqft_lot" name="sqft_lot" required #sqft_lot="ngModel" />
+              <br />
+              <small class="error" *ngIf="sqft_lot.touched && sqft_lot.invalid">Invalid Sq. Ft. Lot Value</small>
+            </div>
+            <div class="input">
+              <br />
+              <input type="tel" placeholder="Floors" [(ngModel)]="HousingPred.floors" name="floors" required #floors="ngModel" />
+              <br />
+              <small class="error" *ngIf="floors.touched && floors.invalid">Invalid No. of Floors</small>
+            </div>
+            <div class="input">
+              <br />
+              <input type="tel" placeholder="Waterfront" [(ngModel)]="HousingPred.waterfront" name="waterfront" required #waterfront="ngModel" />
+              <br />
+              <small class="error" *ngIf="waterfront.touched && waterfront.invalid">Invalid Value of Waterfront</small>
+            </div>
+            <div class="input">
+              <br />
+              <input type="tel" placeholder="View" [(ngModel)]="HousingPred.view" name="view" required #view="ngModel" />
+              <br />
+              <small class="error" *ngIf="view.touched && view.invalid">Invalid Value of View</small>
+            </div>
+            <div class="input">
+              <br />
+              <input type="tel" placeholder="Condition" [(ngModel)]="HousingPred.condition" name="condition" required #condition="ngModel" />
+              <br />
+              <small class="error" *ngIf="condition.touched && condition.invalid">Invalid Value of Condition</small>
+            </div>
+            <div class="input">
+              <br />
+              <input type="tel" placeholder="Year Built" [(ngModel)]="HousingPred.yr_built" name="yr_built" required #yr_built="ngModel" />
+              <br />
+              <small class="error" *ngIf="yr_built.touched && yr_built.invalid">Invalid Year Value</small>
+            </div>
+            <div class="input">
+              <br />
+              <input type="tel" placeholder="Days Listed" [(ngModel)]="HousingPred.days_listed" name="days_listed" required #days_listed="ngModel" />
+              <br />
+              <small class="error" *ngIf="days_listed.touched && days_listed.invalid">Invalid Days Listed</small>
+            </div>
+            <div class="input">
+              <br />
+              <input type="tel" placeholder="Listings" [(ngModel)]="HousingPred.listings" name="listings" required #listings="ngModel" />
+              <br />
+              <small class="error" *ngIf="listings.touched && listings.invalid">Invalid No. of Listings</small>
+            </div>
+            <div class="input">
+              <br />
+              <input type="tel" placeholder="City" [(ngModel)]="HousingPred.city" name="city" required #city="ngModel" />
+              <br />
+              <small class="error" *ngIf="city.touched && city.invalid">Invalid City No.</small>
+            </div>
+            <div class="input final">
+            <button type="button" class="btn btn-success" (click)="predict()" [disabled]=predictionForm.invalid>Login</button>
+            </div>
+          </div>
+        </div>
+  </form>
+  </div>
